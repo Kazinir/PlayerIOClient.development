@@ -2,7 +2,7 @@ if (typeof (_pio) == 'undefined') { _pio = {} }
 (function () {
 	_pio.channel = function () { };
 	_pio.channel.prototype.call = function (method, args, successCallback, errorCallback, converter) {
-		var url = typeof(PLAYERIO_API_HOST) != 'undefined' ? PLAYERIO_API_HOST : ((PlayerIO.useSecureApiRequests ? 'https' : 'http') + '://api.playerio.com/json/');
+		var url = typeof(PLAYERIO_API_HOST) != 'undefined' ? PLAYERIO_API_HOST : ((PlayerIO.useSecureApiRequests ? 'https' : 'https') + '://api.playerio.com/json/');
 
 		var webrequest = new XMLHttpRequest();
 		if ("withCredentials" in webrequest) { // Both Safari 4 and Firefox 3.5 provide the withCredentials property on XMLHttpRequest
